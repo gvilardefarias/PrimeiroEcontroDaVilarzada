@@ -7,21 +7,23 @@
     <title>I Encontro da Vilarzada</title>
 
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/fotos.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    
+    <script type="text/javascript" src="js/fotos.js"></script>
   </head>
-  <body>
+  <body ng-app="PrimeiroEncontroDaVilarzada" ng-controller="Fotos" class="grey lighten-4">
     <header>
       <nav>
         <div class="nav-wrapper brown darken-2 z-depth-4">
           <a href="index.html" class="brand-logo center brown-text text-darken-2 logo">...................</a>
           <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="fotos.html">Fotos</a></li>
+            <li class="active"><a href="fotos.html">Fotos</a></li>
             <li><a href="badges.html">Vídeos</a></li>
           </ul>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -30,7 +32,7 @@
           </ul>
 
           <ul id="slide-out" class="side-nav">
-            <li><a href="fotos.html">Fotos</a></li>
+            <li class="active"><a href="fotos.html">Fotos</a></li>
             <li><a href="badges.html">Vídeos</a></li>
             <li><a href="sass.html">Músicas</a></li>
             <li><a href="badges.html">Antônio Cristovão</a></li>  
@@ -40,18 +42,17 @@
       </nav>
     </header>
 
-    <main>
-      <div class="parallax-container">
-        <div class="parallax"><img src="imgs/cadeirasVazias.jpg"></div>
+    <main class="container">
+      <h3 class="center-align brown-text text-darken-">Fotos do I Encontro da Vilarzada</h3>
+      <div class="divider"></div>
+
+      <div class="carousel">
+        <a class="carousel-item" ng-repeat="foto in fotos"><img ng-src="imgs/fotos/{{foto}}"></a>
       </div>
-      <div class="section grey lighten-4">
-        <div class="row container">
-          <h2 class="header brown-text text-darken-2">I Encontro da Vilarzada</h2>
-          <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-        </div>
-      </div>
-      <div class="parallax-container">
-        <div class="parallax"><img src="imgs/exemploMesa.jpg"></div>
+
+      <div ng-repeat="foto in fotos">
+        <img class="materialboxed responsive-img foto"  ng-src="imgs/fotos/{{foto}}">
+        <p></p>
       </div>
     </main>
 
