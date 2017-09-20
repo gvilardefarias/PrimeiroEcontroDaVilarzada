@@ -46,15 +46,13 @@
     <main class="container">
       <h3 class="center-align brown-text text-darken-">Fotos do I Encontro da Vilarzada</h3>
       <div class="divider"></div>
+      <p></p>
 
-      <div class="carousel">
-        <a class="carousel-item" ng-repeat="foto in fotos"><img ng-src="imgs/fotos/{{foto}}"></a>
+      <div class="carousel carousel-slider">
+        <a class="carousel-item" ng-repeat="foto in fotos"><center><img ng-src="imgs/fotos/{{foto}}" class="materialboxed responsive-img"></center></a>
       </div>
 
-      <div ng-repeat="foto in fotos">
-        <img class="materialboxed responsive-img foto"  ng-src="imgs/fotos/{{foto}}">
-        <p></p>
-      </div>
+      <p></p>
     </main>
 
     <footer class="page-footer brown darken-2 z-depth-4">
@@ -64,6 +62,5 @@
         </div>
       </div>
     </footer>
-
   </body>
 </html>
