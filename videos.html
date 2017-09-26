@@ -59,13 +59,16 @@
       <div class="divider"></div>
       <p></p>
 
-      <div class="carousel carousel-slider">
-        <a class="carousel-item" ng-repeat="video in videos"><center>
+
+      <div ng-repeat="video in videos">
+        <center>
           <video class="responsive-video" controls>
             <source ng-src="videos/{{video}}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-        </center></a>
+        </center>
+
+        <p></p>
       </div>
     </main>
 
