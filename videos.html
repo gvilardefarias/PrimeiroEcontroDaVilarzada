@@ -1,80 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>I Encontro da Vilarzada</title>
-    <link rel="icon" href="imgs/logoSN.png">
+  <title>I Encontro da Vilarzada</title>
+  <link rel="icon" href="imgs/logoSN.png">
 
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/videos.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/videos.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    
-    <script type="text/javascript" src="js/videos.js"></script>
-  </head>
-  <body ng-app="PrimeiroEncontroDaVilarzada" ng-controller="Videos" class="grey lighten-4">
-    <header>
-      <nav>
-        <div class="nav-wrapper brown darken-2 z-depth-4">
-          <a href="index.html" class="brand-logo center brown-text text-darken-2 logo">...................</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="fotos.html">Fotos</a></li>
-            <li class="active"><a href="videos.html">Vídeos</a></li>
-          </ul>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="cordel.html">Cordel</a></li>
-            <li><a href="badges.html">Antônio Cristovão</a></li>
-          </ul>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-          <ul id="slide-out" class="side-nav">
-            <li><a href="fotos.html">Fotos</a></li>
-            <li class="active"><a href="videos.html">Vídeos</a></li>
-            <li><a href="cordel.html">Cordel</a></li>
-            <li><a href="badges.html">Antônio Cristovão</a></li>  
-          </ul>
-          <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-      </nav>
-    </header>
+  <script type="text/javascript" src="js/videos.js"></script>
+</head>
+<body ng-app="PrimeiroEncontroDaVilarzada" ng-controller="Videos" class="grey lighten-4">
+  <header>
+    <nav>
+      <div class="nav-wrapper brown darken-2 z-depth-4">
+        <a href="index.html" class="brand-logo center brown-text text-darken-2 logo">...................</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="fotos.html">Fotos</a></li>
+          <li class="active"><a href="videos.html">Vídeos</a></li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="cordel.html">Cordel</a></li>
+          <li><a href="badges.html">Antônio Cristovão</a></li>
+        </ul>
 
-    <main class="container">
-
-      <h3 class="center-align brown-text text-darken-">Curta-metragem do I Encontro da Vilazarda</h3>
-      <div class="divider"></div>
-      <p></p>
-    
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/ouaAkQbrvxg" frameborder="0" allowfullscreen></iframe>
+        <ul id="slide-out" class="side-nav">
+          <li><a href="fotos.html">Fotos</a></li>
+          <li class="active"><a href="videos.html">Vídeos</a></li>
+          <li><a href="cordel.html">Cordel</a></li>
+          <li><a href="badges.html">Antônio Cristovão</a></li>  
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <h3 class="center-align brown-text text-darken-">Curta-metragem do I Encontro da Vilazarda</h3>
+    <div class="divider"></div>
+    <p></p>
+    
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/ouaAkQbrvxg" frameborder="0" allowfullscreen></iframe>
+    </div>
     
 
-      <p></p>
-      <h3 class="center-align brown-text text-darken-">Vídeos do I Encontro da Vilarzada</h3>
-      <div class="divider"></div>
-      <p></p>
+    <p></p>
+    <h3 class="center-align brown-text text-darken-">Vídeos do I Encontro da Vilarzada</h3>
+    <div class="divider"></div>
+    <p></p>
 
-      <div class="carousel carousel-slider">
-        <a class="carousel-item" ng-repeat="video in videos"><center>
-          <video class="responsive-video" controls>
-            <source ng-src="videos/{{video}}" type="video/mp4">
+
+    <div class="carousel-item" ng-repeat="video in videos">
+      <center>
+        <video class="responsive-video" controls>
+          <source ng-src="videos/{{video}}" type="video/mp4">
             Your browser does not support the video tag.
-          </video>
-        </center></a>
-      </div>
-    </main>
+        </video>
+      </center>
 
-    <footer class="page-footer brown darken-2 z-depth-4">
-      <div class="footer-copyright">
-        <div class="container grey-text text-lighten-4 right">
+      <p></p>
+    </div>
+  </main>
+
+  <footer class="page-footer brown darken-2 z-depth-4">
+    <div class="footer-copyright">
+      <div class="container grey-text text-lighten-4 right">
         © 2017 <a href="https://github.com/gvilardefarias" class="grey-text text-lighten-4">Gustavo Vilar de Farias</a>
-        </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
 </html>
